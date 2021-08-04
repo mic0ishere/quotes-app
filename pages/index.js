@@ -10,17 +10,17 @@ export default function Page() {
         <title>Showcase</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {loading && <h1>Loading...</h1>}
-      {!session && (
-        <>
-          <h1>Not signed in</h1>
-          <button onClick={() => signIn()}>Sign in</button>
-        </>
-      )}
-      {session && (
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : session ? (
         <>
           <MainPage />
           <button onClick={() => signOut()}>Sign out</button>
+        </>
+      ) : (
+        <>
+          <h1>Not signed in</h1>
+          <button onClick={() => signIn()}>Sign in</button>
         </>
       )}
     </div>
