@@ -1,7 +1,8 @@
 {
-  "name": "showcase-app",
+  "name": "quotes-app",
   "version": "0.1.0",
   "private": true,
+  "author": "mic0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
